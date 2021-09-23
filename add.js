@@ -9,11 +9,11 @@ function addProduct(new_item) {
             'Content-type': 'application/json; charset=UTF-8',
         },
     })
-    .then(responce => responce.json())
-    .then(data => {
-        console.log(data);        
-        
-    })
+        .then(responce => responce.json())
+        .then(data => {
+            console.log(data);
+
+        })
 
 }
 
@@ -23,13 +23,13 @@ function addProduct(new_item) {
 add_form.addEventListener("submit", e => {
     //  PREVENT THE DEFAULT ACTION OF THE FORM 
     e.preventDefault();
-    
+
     //  CREATE AN OBJECT CONTAINING ALL THE INPUTS VALUES
     let new_item = {
         name: document.querySelector(".add-name").value,
-        price: document.querySelector(".add-price").value, 
+        price: document.querySelector(".add-price").value,
         category: document.querySelector(".add-category").value,
-        description: document.querySelector(".add-description").value, 
+        description: document.querySelector(".add-description").value,
         image: document.querySelector(".add-image").value
     }
     console.log(new_item)
